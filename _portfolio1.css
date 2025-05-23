@@ -1,49 +1,113 @@
+/* Base styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f8fb;
+    color: #222;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Header */
 header {
-    background-color: #333;
+    background: linear-gradient(90deg, #4f8cff 0%, #6ed6ff 100%);
     color: white;
-    padding: 20px;
+    padding: 40px 0 25px 0;
+    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.07);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.4em;
+    letter-spacing: 2px;
+}
+
+/* Section containers */
+section {
+    background: #fff;
+    margin: 32px auto;
+    padding: 28px 30px 18px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(79, 140, 255, 0.09);
+    max-width: 750px;
+    text-align: left;
 }
 
 h2 {
-    color: #333;
+    color: #4f8cff;
+    margin-top: 0;
+    font-size: 1.5em;
+    border-bottom: 2px solid #e3eafc;
+    padding-bottom: 6px;
+    margin-bottom: 18px;
 }
 
-.education, .experience, .projects, .volunteering, .skills {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+h3 {
+    color: #333;
+    margin-bottom: 6px;
 }
 
 .job, .project, .volunteer {
-    margin-top: 15px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #6ed6ff;
+    margin-bottom: 20px;
+    padding: 14px 18px;
+    background: #f7fbff;
+    border-radius: 7px;
+    box-shadow: 0 2px 8px rgba(110, 214, 255, 0.06);
 }
 
+.job:last-child, .project:last-child, .volunteer:last-child {
+    margin-bottom: 0;
+}
+
+/* Skills section */
 .skills p {
-    font-weight: bold;
-    color: #444;
-    margin-bottom: 10px;
+    font-weight: 500;
+    color: #2d5fa4;
+    margin-bottom: 12px;
 }
 
+.skills strong {
+    color: #4f8cff;
+}
+
+/* Footer */
 footer {
-    background-color: #333;
+    background: #4f8cff;
     color: white;
-    padding: 10px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: auto;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+/* Links */
+a {
+    color: #4f8cff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #6ed6ff;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    section {
+        padding: 16px 8px 10px 8px;
+        margin: 16px 4px;
+    }
+    header {
+        padding: 28px 0 15px 0;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
 }
