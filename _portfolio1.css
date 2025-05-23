@@ -1,8 +1,8 @@
-/* Base styles */
+/* Reset and base styles */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #f6f8fb;
-    color: #222;
+    color: #23272f;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -13,46 +13,51 @@ body {
 /* Header */
 header {
     background: linear-gradient(90deg, #4f8cff 0%, #6ed6ff 100%);
-    color: white;
-    padding: 40px 0 25px 0;
+    color: #fff;
+    padding: 48px 0 28px 0;
+    text-align: center;
     box-shadow: 0 2px 8px rgba(79, 140, 255, 0.07);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.4em;
+    font-size: 2.6em;
     letter-spacing: 2px;
+    font-weight: 700;
 }
 
 /* Section containers */
 section {
     background: #fff;
     margin: 32px auto;
-    padding: 28px 30px 18px 30px;
-    border-radius: 12px;
+    padding: 32px 36px 22px 36px;
+    border-radius: 14px;
     box-shadow: 0 4px 24px rgba(79, 140, 255, 0.09);
-    max-width: 750px;
+    max-width: 800px;
     text-align: left;
 }
 
 h2 {
     color: #4f8cff;
     margin-top: 0;
-    font-size: 1.5em;
+    font-size: 1.7em;
     border-bottom: 2px solid #e3eafc;
-    padding-bottom: 6px;
-    margin-bottom: 18px;
+    padding-bottom: 8px;
+    margin-bottom: 22px;
+    font-weight: 600;
 }
 
 h3 {
-    color: #333;
-    margin-bottom: 6px;
+    color: #23272f;
+    margin-bottom: 7px;
+    font-size: 1.15em;
+    font-weight: 500;
 }
 
 .job, .project, .volunteer {
     border-left: 4px solid #6ed6ff;
-    margin-bottom: 20px;
-    padding: 14px 18px;
+    margin-bottom: 24px;
+    padding: 16px 22px;
     background: #f7fbff;
     border-radius: 7px;
     box-shadow: 0 2px 8px rgba(110, 214, 255, 0.06);
@@ -62,11 +67,17 @@ h3 {
     margin-bottom: 0;
 }
 
+.job p, .project p, .volunteer p {
+    margin: 6px 0 0 0;
+    line-height: 1.5;
+}
+
 /* Skills section */
 .skills p {
     font-weight: 500;
     color: #2d5fa4;
     margin-bottom: 12px;
+    line-height: 1.5;
 }
 
 .skills strong {
@@ -77,11 +88,12 @@ h3 {
 footer {
     background: #4f8cff;
     color: white;
-    padding: 15px 0;
+    padding: 18px 0;
     text-align: center;
     margin-top: auto;
-    font-size: 1em;
+    font-size: 1.1em;
     letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(79, 140, 255, 0.07);
 }
 
 /* Links */
@@ -96,18 +108,19 @@ a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     section {
-        padding: 16px 8px 10px 8px;
-        margin: 16px 4px;
+        padding: 18px 8px 12px 8px;
+        margin: 18px 4px;
+        max-width: 98vw;
     }
     header {
-        padding: 28px 0 15px 0;
+        padding: 30px 0 15px 0;
     }
-    h1 {
+    header h1 {
         font-size: 1.5em;
     }
     h2 {
-        font-size: 1.1em;
+        font-size: 1.15em;
     }
 }
