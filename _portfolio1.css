@@ -1,139 +1,207 @@
-/* Reset and base styles */
+CSS
+
+/* General Body Styles */
 body {
-    font-family: 'Inter', sans-serif; /* Changed font to Inter */
-    background: #f6f8fb url('https://placehold.co/1920x1080/E0EAFB/4F8CFF/jpg?text=Subtle+Background') no-repeat center center fixed; /* Added background image */
-    background-size: cover; /* Ensure background covers the entire body */
-    color: #23272f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #f4f7f6; /* Light grey background */
+    color: #333; /* Dark grey text */
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
-/* Header */
+/* Header Styles */
 header {
-    background: linear-gradient(90deg, #4f8cff 0%, #6ed6ff 100%);
-    color: #fff;
-    padding: 48px 0 28px 0;
+    background-color: #2c3e50; /* Dark blue */
+    color: #ecf0f1; /* Light grey */
+    padding: 2.5em 0;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.07);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.6em;
+    font-size: 3em;
     letter-spacing: 2px;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Added text shadow for highlighting */
+    text-transform: uppercase;
 }
 
-/* Section containers */
+header .tagline {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    opacity: 0.9;
+}
+
+/* Main Content Area */
+main {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1.5em;
+}
+
+/* Section Styling */
 section {
-    background: #fff;
-    margin: 32px auto;
-    padding: 32px 36px 22px 36px;
-    border-radius: 14px;
-    box-shadow: 0 4px 24px rgba(79, 140, 255, 0.09);
-    max-width: 800px;
-    text-align: left;
-    position: relative; /* Needed for potential pseudo-element highlighting */
-    z-index: 1; /* Ensure sections are above background */
+    background-color: #fff;
+    padding: 2.5em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out; /* Subtle hover effect */
 }
 
-h2 {
-    color: #4f8cff;
+section:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+section h2 {
+    color: #2980b9; /* Bright blue */
+    font-size: 2em;
     margin-top: 0;
-    font-size: 1.7em;
-    border-bottom: 2px solid #e3eafc;
-    padding-bottom: 8px;
-    margin-bottom: 22px;
-    font-weight: 600;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.5em;
+    text-transform: capitalize;
 }
 
-h3 {
-    color: #23272f;
-    margin-bottom: 7px;
-    font-size: 1.15em;
-    font-weight: 500;
+/* Education, Experience, Projects, Volunteering Item Styling */
+.education-item,
+.job,
+.project,
+.volunteer {
+    margin-bottom: 2em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px dashed #eee;
 }
 
-.job, .project, .volunteer {
-    border-left: 4px solid #6ed6ff;
-    margin-bottom: 24px;
-    padding: 16px 22px;
-    background: #f7fbff;
-    border-radius: 7px;
-    box-shadow: 0 2px 8px rgba(110, 214, 255, 0.06);
-}
-
-.job:last-child, .project:last-child, .volunteer:last-child {
+.education-item:last-child,
+.job:last-child,
+.project:last-child,
+.volunteer:last-child {
+    border-bottom: none; /* No border for the last item in a section */
     margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.job p, .project p, .volunteer p {
-    margin: 6px 0 0 0;
-    line-height: 1.5;
+.education-item h3,
+.job h3,
+.project h3,
+.volunteer h3 {
+    color: #34495e; /* Darker blue-grey */
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
 }
 
-/* Skills section */
+.education-item p,
+.job p,
+.project p,
+.volunteer p {
+    margin: 0.2em 0;
+}
+
+.job ul,
+.project ul,
+.volunteer ul {
+    list-style: disc; /* Use discs for list items */
+    margin-left: 1.5em;
+    padding: 0;
+}
+
+.job ul li,
+.project ul li,
+.volunteer ul li {
+    margin-bottom: 0.5em;
+}
+
+.project-links a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 1em;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+    color: #1a6cb2; /* Darker blue on hover */
+}
+
+/* Skills Section */
 .skills p {
-    font-weight: 500;
-    color: #2d5fa4;
-    margin-bottom: 12px;
-    line-height: 1.5;
+    margin: 0.8em 0;
 }
 
 .skills strong {
-    color: #4f8cff;
+    color: #2c3e50;
+    display: inline-block; /* Helps with spacing on small screens */
+    margin-right: 0.5em;
 }
 
-/* Text highlighting class */
-.highlight {
-    background-color: rgba(255, 255, 0, 0.2); /* Subtle yellow highlight */
-    padding: 2px 5px;
-    border-radius: 3px;
-    font-weight: 600; /* Make highlighted text a bit bolder */
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
-    background: #4f8cff;
-    color: white;
-    padding: 18px 0;
     text-align: center;
-    margin-top: auto;
-    font-size: 1.1em;
-    letter-spacing: 1px;
-    box-shadow: 0 -2px 8px rgba(79, 140, 255, 0.07);
+    padding: 2em 0;
+    background-color: #34495e; /* Dark blue-grey */
+    color: #ecf0f1;
+    font-size: 0.9em;
+    margin-top: 2em;
 }
 
-/* Links */
-a {
-    color: #4f8cff;
+footer a {
+    color: #85c1e9; /* Lighter blue for links */
     text-decoration: none;
-    transition: color 0.2s;
+    font-weight: bold;
+    margin: 0 0.5em; /* Spacing between footer links */
+    transition: color 0.3s ease;
 }
-a:hover {
-    color: #6ed6ff;
+
+footer a:hover {
     text-decoration: underline;
+    color: #c0deed; /* Even lighter blue on hover */
 }
 
 /* Responsive Design */
-@media (max-width: 700px) {
-    section {
-        padding: 18px 8px 12px 8px;
-        margin: 18px 4px;
-        max-width: 98vw;
-    }
-    header {
-        padding: 30px 0 15px 0;
-    }
+@media (max-width: 768px) {
     header h1 {
+        font-size: 2.5em;
+    }
+
+    main {
+        margin: 1.5em auto;
+        padding: 0 1em;
+    }
+
+    section {
+        padding: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header .tagline {
+        font-size: 1em;
+    }
+
+    section h2 {
         font-size: 1.5em;
     }
-    h2 {
-        font-size: 1.15em;
+
+    .education-item h3,
+    .job h3,
+    .project h3,
+    .volunteer h3 {
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 1.5em 0;
     }
 }
