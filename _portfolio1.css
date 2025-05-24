@@ -1,13 +1,15 @@
 /* Reset and base styles */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f6f8fb;
+    font-family: 'Inter', sans-serif; /* Changed font to Inter */
+    background: #f6f8fb url('https://placehold.co/1920x1080/E0EAFB/4F8CFF/jpg?text=Subtle+Background') no-repeat center center fixed; /* Added background image */
+    background-size: cover; /* Ensure background covers the entire body */
     color: #23272f;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Header */
@@ -24,6 +26,7 @@ header h1 {
     font-size: 2.6em;
     letter-spacing: 2px;
     font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Added text shadow for highlighting */
 }
 
 /* Section containers */
@@ -35,6 +38,8 @@ section {
     box-shadow: 0 4px 24px rgba(79, 140, 255, 0.09);
     max-width: 800px;
     text-align: left;
+    position: relative; /* Needed for potential pseudo-element highlighting */
+    z-index: 1; /* Ensure sections are above background */
 }
 
 h2 {
@@ -82,6 +87,14 @@ h3 {
 
 .skills strong {
     color: #4f8cff;
+}
+
+/* Text highlighting class */
+.highlight {
+    background-color: rgba(255, 255, 0, 0.2); /* Subtle yellow highlight */
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: 600; /* Make highlighted text a bit bolder */
 }
 
 /* Footer */
